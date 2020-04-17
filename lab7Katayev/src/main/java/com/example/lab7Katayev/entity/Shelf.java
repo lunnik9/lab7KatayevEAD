@@ -9,8 +9,8 @@ public class Shelf implements Storage{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
-    @OneToMany(mappedBy = "storage_id",fetch = FetchType.LAZY)
-    private List<Book>books;
+    @OneToMany(mappedBy = "storage_id", fetch = FetchType.LAZY)
+    private List<Book> books;
 
     public String getName() {
         return name;
@@ -18,5 +18,10 @@ public class Shelf implements Storage{
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public Storage getStorage() {
+        return this;
     }
 }
