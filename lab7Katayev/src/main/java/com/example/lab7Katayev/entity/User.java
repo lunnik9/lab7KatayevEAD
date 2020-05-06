@@ -1,5 +1,7 @@
 package com.example.lab7Katayev.entity;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +10,8 @@ import java.util.Collection;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,35 +29,7 @@ public class User implements UserDetails {
     )
     private List<Role> roles;
 
-    public void setLocked(boolean locked) {
-        this.locked = locked;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setExpired(boolean expired) {
-        this.expired = expired;
-    }
-
-    public void setCredsExpired(boolean credsExpired) {
-        this.credsExpired = credsExpired;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
     private boolean enabled;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

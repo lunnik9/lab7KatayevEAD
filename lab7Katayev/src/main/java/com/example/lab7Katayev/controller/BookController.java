@@ -2,10 +2,12 @@ package com.example.lab7Katayev.controller;
 
 import com.example.lab7Katayev.entity.Book;
 import com.example.lab7Katayev.repository.BookRepository;
+import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/book")
+@Api(value = "book controller class")
 public class BookController {
     private BookRepository bookRepository;
 

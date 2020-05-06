@@ -4,6 +4,7 @@ import com.example.lab7Katayev.entity.Library;
 import com.example.lab7Katayev.entity.Storage;
 import com.example.lab7Katayev.entity.User;
 import com.example.lab7Katayev.repository.LibraryRepository;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/library")
+@Api(value = "library controller class")
 public class LibraryController {
     @Autowired
     private LibraryRepository libraryRepository;

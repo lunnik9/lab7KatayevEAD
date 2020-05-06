@@ -2,11 +2,13 @@ package com.example.lab7Katayev.controller;
 
 import com.example.lab7Katayev.entity.Storage;
 import com.example.lab7Katayev.repository.StorageRepository;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/storage")
+@Api(value = "storage controller class")
 public class StorageController {
 
     @Autowired

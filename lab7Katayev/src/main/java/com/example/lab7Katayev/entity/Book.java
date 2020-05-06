@@ -1,9 +1,15 @@
 package com.example.lab7Katayev.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.sql.Time;
 
 @Entity
+@Getter
+@Setter
+
 public class Book {
 
     @Id
@@ -11,53 +17,6 @@ public class Book {
     private String id;
     private String ISBN;
 
-    public String getISBN() {
-        return ISBN;
-    }
-
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Time getExpirationDate() {
-        return ExpirationDate;
-    }
-
-    public void setExpirationDate(Time expirationDate) {
-        ExpirationDate = expirationDate;
-    }
-
-    public String getStorageId() {
-        return StorageId;
-    }
-
-    public void setStorageId(String storageId) {
-        StorageId = storageId;
-    }
 
     private String author;
     private String name;
